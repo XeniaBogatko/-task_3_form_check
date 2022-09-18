@@ -4,8 +4,6 @@ import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
-import java.time.LocalDate;
-
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
@@ -13,13 +11,13 @@ import static com.codeborne.selenide.Selenide.*;
 public class FormTest {
 
     @BeforeAll
-    static void setUp(){
+    static void setUp() {
         Configuration.baseUrl = "https://demoqa.com";
         Configuration.holdBrowserOpen = true;
     }
 
     @Test
-    void firstTest(){
+    void firstTest() {
         open("/automation-practice-form");
 
         executeJavaScript("$('footer').remove()");
